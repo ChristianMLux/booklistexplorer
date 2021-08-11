@@ -1,8 +1,13 @@
 <template>
   <h2>{{ book.title }}</h2>
-  <ol>
-    <li v-for="(value, key) in book" :key="key">{{ key }}: {{ value }}</li>
-  </ol>
+  <div class="info-wrapper">
+    <ol>
+      <li v-for="(value, key) in book" :key="key">
+        <p class="keyP">{{ key }}:</p>
+        <p class="valueP">{{ value }}</p>
+      </li>
+    </ol>
+  </div>
 </template>
 <script>
 export default {
@@ -33,8 +38,28 @@ export default {
 </script>
 
 <style scoped>
+.info-wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
 ol {
   list-style: none;
   text-align: left;
+}
+ol > li {
+  display: flex;
+  justify-content: space-between;
+}
+li > p:first-child {
+  width: 15%;
+  font-weight: bold;
+}
+li > p:last-child {
+  width: 85%;
+  text-align: justify;
+}
+p {
+  margin: 0;
+  padding: 0.5rem;
 }
 </style>

@@ -25,16 +25,14 @@ body {
   margin: 0 auto;
 }
 
-#nav {
-  padding: 30px;
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 0.5rem;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  &.router-link-exact-active {
+    background-color: #2c3e50;
+    color: snow;
   }
 }
 </style>

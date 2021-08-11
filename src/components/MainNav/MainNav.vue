@@ -48,7 +48,7 @@ ul {
 }
 ul > li {
   margin: 0;
-  padding: 1rem;
+  padding: 0.4rem;
   background-color: #42b883;
 }
 </style>

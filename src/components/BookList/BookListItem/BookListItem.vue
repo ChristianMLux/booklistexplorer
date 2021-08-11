@@ -46,7 +46,7 @@ export default {
 <style scoped>
 ul > li {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0.2rem;
   text-align: left;
 }
@@ -54,9 +54,16 @@ ul > li:nth-child(1n + 1) {
   color: snow;
   background-color: #35495e;
 }
+ul > li:nth-child(1n + 1) > a {
+  color: snow;
+  margin: auto 0;
+}
 ul > li:nth-child(2n + 2) {
   color: black;
   background-color: #42b883;
+}
+ul > li:nth-child(2n + 2) > a {
+  color: black;
 }
 li > p {
   width: 33%;

@@ -7,6 +7,10 @@ const ROUTES = [
     routeTarget: "/books",
     routeName: "Books",
   },
+  {
+    routeTarget: "/about",
+    routeName: "About",
+  },
 ];
 
 export default ROUTES;

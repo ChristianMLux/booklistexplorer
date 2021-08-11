@@ -2,7 +2,9 @@
   <li>
     <p>{{ title }}</p>
     <p>{{ subtitle }}</p>
-    <p>{{ isbn }}</p>
+    <router-link :to="{ name: 'BookDetail', params: { isbn: isbn } }">
+      {{ isbn }}
+    </router-link>
     <button :disabled="read" @click="$emit('read')">
       <p v-if="read">Done</p>
       <p v-else>Read</p>
@@ -29,7 +31,6 @@ export default {
     numPages: {
       type: Number,
       validator: (val) => {
-        console.log(val);
         return val < 1000;
       },
     },

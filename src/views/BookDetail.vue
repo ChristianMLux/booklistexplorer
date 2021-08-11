@@ -1,6 +1,7 @@
 <template>
   <h2>{{ book.title }}</h2>
   <div class="info-wrapper">
+    <img :src="book.cover" />
     <ol>
       <li v-for="(value, key) in book" :key="key">
         <p class="keyP">{{ key }}:</p>
@@ -38,11 +39,24 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  padding: 1rem 0 0 0;
+  margin: 0;
+}
 .info-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
+}
+img {
+  padding: 0;
+  margin: 0;
 }
 ol {
+  margin: 2.5rem 0 0 0;
+  padding: 0;
   list-style: none;
   text-align: left;
 }
